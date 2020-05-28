@@ -1,0 +1,26 @@
+#s3 {
+    position: relative;
+}
+
+#s3 .slide,
+#s3 .contact {
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width:100%;
+}
+
+.contact {
+    display: flex;
+	flex-wrap: wrap;
+}
+
+.contact .font a{	
+	opacity: .5;
+}
+
+.contact .font a:hover {
+    opacity: 1;
+}

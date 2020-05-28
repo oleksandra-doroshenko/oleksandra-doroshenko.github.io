@@ -1,0 +1,77 @@
+.portfolio {
+	position: relative;
+	margin: 0;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+	list-style: none;
+}
+
+.font {
+	position: relative;
+	text-decoration: none;
+	color: #000;
+	width: 25%;
+	height: 33.33%;
+/*    height: calc(var(--vh, 1vh) * 33.33);*/
+	font-size: 15vw;
+	font-weight: normal;
+	text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cyan { background-color: #1AA5B7; }
+.magenta { background-color: #FF4C66; }
+.orange { background-color: #FF931E; }
+
+.font a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    max-height: 100%;
+    vertical-align:middle;
+    text-decoration: none;
+    opacity: .3;
+    transition: opacity 300ms ease;
+}
+
+.font a img {
+    display: block;
+    width: auto;
+    max-width: 40%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.font a:hover {
+    opacity: 1;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.portfolio .font:nth-child(2) {
+	font-family: 'Sara';
+	font-weight: normal;
+	color: #1AA5B7;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+
+    .font {
+		width: 33.33%;
+		height: 25%;
+/*        height: calc(var(--vh, 1vh) * 25);*/
+	}
+    
+    .font:nth-child(8) {
+        order: 1;
+    }
+}

@@ -1,0 +1,99 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9995;
+}
+
+nav a {
+    display: block;
+    cursor: pointer;
+}
+
+nav .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: auto;
+    padding: 25px 60px;
+    position: relative;
+}
+
+.navigation button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 30px 40px;
+    background: none;
+    border: none;
+    outline: none;
+    display: block;
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 200ms ease;
+}
+
+nav .navigation button {
+    opacity: 1;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    /*	align-items: flex-end;*/
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    font-variant: small-caps;
+    list-style: none;
+    background-color: rgba(255, 255, 255, .95);
+    position: absolute;
+    padding: 90px 40px;
+    left: 0;
+    top: 0;
+    min-width: 25%;
+    min-height: 100vh;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    opacity: 0;
+    transition-property: transform;
+    transition-duration: .35s;
+    /*        transition-delay: .2s;*/
+    transition-timing-function: ease;
+    z-index: 9998;
+}
+
+.navigation.open ul {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.navigation li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navigation.open .overlay {
+    background-color: rgba(255, 255, 255, .7);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 9997;
+}
+
+@media screen and (max-width:767px) {
+
+    .navigation button {
+        margin-left: 30px;
+        margin-top: 25px;
+    }
+    
+    .navigation ul {
+        padding-left: 30px;
+    }
+}

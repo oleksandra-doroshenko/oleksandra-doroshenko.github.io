@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#fullpage .section {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+#fullpage {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+}
+
+#fullpage > * {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    position: relative;
+}
+
+.prev-lnk,
+.next-lnk {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+}
+
+.prev-lnk {
+    bottom: 0;
+}
+
+.next-lnk {
+    bottom: 0;
+}
+
+.prev-lnk:before,
+.prev-lnk:after,
+.next-lnk:before,
+.next-lnk:after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 50%;
+    height: 2px;
+}
+
+.prev-lnk:before {
+    transform: rotate(-45deg) translateX(-50%);
+}
+
+.prev-lnk:after {
+    transform: rotate(45deg) translateX(50%);
+}
+
+.next-lnk:before {
+    transform: rotate(45deg) translateX(-50%);
+}
+
+.next-lnk:after {
+    transform: rotate(-45deg) translateX(50%);
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}

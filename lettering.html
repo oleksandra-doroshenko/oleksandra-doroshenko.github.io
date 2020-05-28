@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Летерінг</title>
+	<style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Regular.ttf') format('truetype'), url('fonts/Roboto-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Medium.ttf') format('truetype'), url('fonts/Roboto-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Bold.ttf') format('truetype'), url('fonts/Roboto-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Black.ttf') format('truetype'), url('fonts/Roboto-Black.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+        
+    </style>
+	<link rel="stylesheet" href="css/split-slider_l.css">
+	<link rel="stylesheet" href="css/nav_l.css">
+	<link rel="stylesheet" href="css/hamburger_l.css">
+
+</head>
+
+<body>
+	<nav>
+		<div class="navbar">
+			<div class="navigation">
+				<button class="nav-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul>
+					<li><a href="index.html">на головну</a></li>
+					<li><a class="nav-link js-scroll" href="#split-slider">роботи</a></li>
+					<li><a class="nav-link js-scroll" href="#head">наверх</a></li>
+<!--					<li><a class="nav-link js-scroll" href="#foot">контакти</a></li>-->
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="fullpage" class="wrapper">
+		<header id="head">
+			<h1>летерінг. експерименти</h1>
+			<a href="#split-slider" class="js-scroll next-lnk"></a>
+<!--
+			<div id="motionPath">
+				<div id="letter">
+					<img src="images/o-letter.svg" alt="">
+				</div>
+				<svg width="1200" height="800">
+					<path stroke="none" fill="none" d="M 150 400 C 150 100 300 100 400 100 Q 400 350 950 250 Q 1000 500 850 600 Q 550 300 150 400 Z"></path>
+				</svg>
+			</div>
+-->
+		</header>
+
+		<section id="split-slider">
+			<div class="split-slideshow">
+				<div class="slideshow">
+					<div class="slider">
+						<div class="item">
+							<img src="images/lettering_1.jpg" alt="">
+						</div>
+						<div class="item">
+							<img src="images/lettering_2.jpg" alt="">
+						</div>
+						<div class="item">
+							<img src="images/lettering_3.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#head" class="js-scroll prev-lnk"></a>
+		</section>
+	</div>
+	
+	<script>
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        window.addEventListener('resize', () => {
+
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    </script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script>
+
+	<script type="text/javascript" src="js/nav-fullpage.js"></script>
+	<script type="text/javascript" src="js/split-slider.js"></script>
+	<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="js/fullpage-init.js"></script>
+	<script src="js/anime.js"></script>
+	<script src="js/animation.js"></script>
+	
+</body>
+
+</html>
